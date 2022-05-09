@@ -69,7 +69,11 @@ const rmFalsy = a => {
 
 
 
-
+const makeObject = arr => {
+    return Object.fromEntries(arr.map(
+        ([key, val]) => Array.isArray(val) ? [key, makeObject(val)] : [key, val]
+    ));
+}
 
 
 
