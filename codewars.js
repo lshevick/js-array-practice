@@ -44,7 +44,15 @@ function flyBy(lamps, drone){
 // Get the mean of an array
 // https://www.codewars.com/kata/563e320cee5dddcf77000158/train/javascript
 
-
+function getAverage(marks){
+    //TODO : calculate the downward rounded average of the marks array
+    let total = 0;
+    for (let i=0; i<marks.length; i++) {
+      total += marks[i];
+    }
+    let average = total / marks.length;
+    return Math.floor(average);
+  }
 
 
 // #5
