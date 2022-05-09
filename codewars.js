@@ -23,7 +23,21 @@ const arr = N => (N) ? [...Array(N).keys()] : [];
 // Drone Fly-By
 // https://www.codewars.com/kata/58356a94f8358058f30004b5/train/javascript
 
-
+function flyBy(lamps, drone){
+    let l = lamps.split('');
+    let d = drone.split('');
+    d = d.length;
+      if (d > l.length) {
+       l.fill('o', 0, l.length); 
+      } else {
+    l.splice(0, d);
+    for (let i = 0; i < d; i++) {  
+        
+      l.unshift('o');
+    }
+      }
+      return l.join('');
+  }
 
 
 // # 4
