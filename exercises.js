@@ -6,7 +6,13 @@
 // Put your answer below -------------------------
 
 
-
+const repeat = (str, int) => {
+    let arr = [];
+    for (let i = 0; i < int; i++) {
+         arr.push(str);
+    }
+    console.log(arr);
+}
 
 
 
