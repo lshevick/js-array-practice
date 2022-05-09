@@ -31,7 +31,7 @@ const repeat = (str, int) => {
 
 
 
-
+const reverse = a => a.map(a.pop, [...a]);
 
 
 
