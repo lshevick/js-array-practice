@@ -49,7 +49,9 @@ const reverse = a => a.map(a.pop, [...a]);
 
 
 
-
+const rmFalsy = a => {
+   return a.filter(Boolean);
+}
 
 
 
