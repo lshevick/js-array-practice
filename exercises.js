@@ -91,7 +91,10 @@ const makeObject = arr => {
 
 
 
-
+const rmDoubles = arr => {
+    let newArr = [...new Set(arr)];
+    return newArr;
+}
 
 
 
