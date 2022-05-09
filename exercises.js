@@ -8,7 +8,7 @@
 
 const repeat = (str, int) => {
     let arr = [];
-    for (let i = 0; i < int; i++) {
+    for (let i = 0; i < int; i++) { //iterates through array int times and pushes string into arr
          arr.push(str);
     }
     console.log(arr);
@@ -31,7 +31,7 @@ const repeat = (str, int) => {
 
 
 
-const reverse = a => a.map(a.pop, [...a]);
+const reverse = a => a.map(a.pop, [...a]);  //iterates through array removing & returning last element and then putting into new array, thus reversing it
 
 
 
@@ -50,7 +50,7 @@ const reverse = a => a.map(a.pop, [...a]);
 
 
 const rmFalsy = a => {
-   return a.filter(Boolean);
+   return a.filter(Boolean);    // filters out falsies
 }
 
 
@@ -71,7 +71,7 @@ const rmFalsy = a => {
 
 const makeObject = arr => {
     return Object.fromEntries(arr.map(
-        ([key, val]) => Array.isArray(val) ? [key, makeObject(val)] : [key, val]
+        ([key, val]) => Array.isArray(val) ? [key, makeObject(val)] : [key, val]    // creates new object from the array values and checks if an array is nested to dive deeper into said array
     ));
 }
 
@@ -92,7 +92,7 @@ const makeObject = arr => {
 
 
 const rmDoubles = arr => {
-    let newArr = [...new Set(arr)];
+    let newArr = [...new Set(arr)]; //creates a set out of array and converts back into array
     return newArr;
 }
 
