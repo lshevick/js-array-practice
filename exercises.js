@@ -115,7 +115,16 @@ const rmDoubles = arr => {
 
 
 
-
+const arrEquals = (a, b) => {
+    if (a === b) return true;                   //checks if directly equal
+    if (a.length !== b.length) return false;    //checks if length is equal
+    a.sort();                                   // sorts arrays
+    b.sort();
+    for (let i=0; i<a.length; i++) {            // checks for equal elements
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
+}
 
 
 
