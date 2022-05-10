@@ -158,14 +158,14 @@ const flatten = arr => {
        const stack = [...arr];
        const newArr = [];
        while (stack.length) {
-           const next = stack.pop();
-           if (Array.isArray(next)) {
-               stack.push(...next);
+           const next = stack.pop();    //removes last item from array and shortens array
+           if (Array.isArray(next)) {   //checks if value is array
+               stack.push(...next);     // pushes spread value (if array) into new array
            } else {
-               newArr.push(next);
+               newArr.push(next);       // if not array, just pushes value
            }
        }
-       return newArr.reverse();
+       return newArr.reverse();         //reverses and returns array
 }
 
 
@@ -182,7 +182,11 @@ const flatten = arr => {
 // Put your answer below -------------------------
 
 
-
+const parts = (arr, indx) => {
+    let newArr = [arr.splice(0, indx)];     // separates first section into array until iterator
+    newArr.push(arr);                       // adds rest of array at end of new one
+    return [newArr];
+}
 
 
 
