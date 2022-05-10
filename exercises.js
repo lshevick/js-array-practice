@@ -154,9 +154,19 @@ const arrEquals = (a, b) => {
 
 
 
-
-
-
+const flatten = arr => {
+       const stack = [...arr];
+       const newArr = [];
+       while (stack.length) {
+           const next = stack.pop();
+           if (Array.isArray(next)) {
+               stack.push(...next);
+           } else {
+               newArr.push(next);
+           }
+       }
+       return newArr.reverse();
+}
 
 
 
